@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0a0e27" />
+      <stop offset="100%" stop-color="#000000" />
+    </radialGradient>
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff" />
+      <stop offset="100%" stop-color="#0099ff" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="200" height="200" fill="url(#bgGrad)"/>
+  
+  <!-- Book at top -->
+  <g transform="translate(100, 35)" filter="url(#glow)">
+    <path d="M -25 0 L 25 0 L 22 15 L -22 15 Z" fill="url(#neonCyan)" stroke="#00d4ff" stroke-width="1.5"/>
+    <path d="M -20 15 L 20 15 L 18 28 L -18 28 Z" fill="#00a8cc" stroke="#00d4ff" stroke-width="1.5"/>
+    <path d="M -15 28 L 15 28 L 12 35 L -12 35 Z" fill="#0088ff" stroke="#00d4ff" stroke-width="1.5"/>
+  </g>
+
+  <!-- Brain with circuit patterns -->
+  <g transform="translate(100, 100)" filter="url(#glow)">
+    <!-- Outer brain outline -->
+    <circle cx="0" cy="0" r="38" fill="none" stroke="url(#neonCyan)" stroke-width="2.5"/>
+    <circle cx="-15" cy="-15" r="18" fill="none" stroke="url(#neonCyan)" stroke-width="2"/>
+    <circle cx="15" cy="-15" r="18" fill="none" stroke="url(#neonCyan)" stroke-width="2"/>
+    <circle cx="-15" cy="15" r="18" fill="none" stroke="url(#neonCyan)" stroke-width="2"/>
+    <circle cx="15" cy="15" r="18" fill="none" stroke="url(#neonCyan)" stroke-width="2"/>
+    
+    <!-- Circuit connections -->
+    <line x1="-8" y1="-25" x2="-8" y2="25" stroke="url(#neonCyan)" stroke-width="1.5" opacity="0.8"/>
+    <line x1="8" y1="-25" x2="8" y2="25" stroke="url(#neonCyan)" stroke-width="1.5" opacity="0.8"/>
+    <line x1="-25" y1="-8" x2="25" y2="-8" stroke="url(#neonCyan)" stroke-width="1.5" opacity="0.8"/>
+    <line x1="-25" y1="8" x2="25" y2="8" stroke="url(#neonCyan)" stroke-width="1.5" opacity="0.8"/>
+    
+    <!-- Circuit nodes -->
+    <circle cx="-12" cy="-12" r="3" fill="url(#neonCyan)"/>
+    <circle cx="12" cy="-12" r="3" fill="url(#neonCyan)"/>
+    <circle cx="-12" cy="12" r="3" fill="url(#neonCyan)"/>
+    <circle cx="12" cy="12" r="3" fill="url(#neonCyan)"/>
+    
+    <!-- Central AI box -->
+    <rect x="-12" y="-12" width="24" height="24" fill="none" stroke="url(#neonCyan)" stroke-width="2" rx="3"/>
+    <text x="0" y="6" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="url(#neonCyan)" text-anchor="middle">AI</text>
+  </g>
+
+  <!-- Magnifying glass on bottom-right -->
+  <g transform="translate(135, 140)" filter="url(#glow)">
+    <circle cx="0" cy="0" r="15" fill="none" stroke="url(#neonCyan)" stroke-width="2"/>
+    <line x1="10" y1="10" x2="22" y2="22" stroke="url(#neonCyan)" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="8" fill="none" stroke="url(#neonCyan)" stroke-width="1.5"/>
+  </g>
+
+  <!-- Ambient particles -->
+  <circle cx="30" cy="40" r="2" fill="#00d4ff" opacity="0.6"/>
+  <circle cx="170" cy="60" r="2" fill="#00d4ff" opacity="0.6"/>
+  <circle cx="50" cy="170" r="1.5" fill="#0099ff" opacity="0.5"/>
+  <circle cx="160" cy="160" r="1.5" fill="#0099ff" opacity="0.5"/>
+  <circle cx="25" cy="120" r="1" fill="#00d4ff" opacity="0.4"/>
+  <circle cx="175" cy="90" r="1" fill="#0099ff" opacity="0.4"/>
+</svg>
